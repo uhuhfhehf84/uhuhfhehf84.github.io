@@ -2,50 +2,212 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Daniel | Perfil Profesional</title>
+    <title>Daniel Galicia Reyes | Perfil Profesional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
-            background-color: #0f0f0f;
-            color: #e0e0e0;
-            font-family: Arial, sans-serif;
-            margin: 40px;
+            background: linear-gradient(180deg, #0a0a0a, #111);
+            color: #e6e6e6;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
         }
-        h1, h2 {
+
+        header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle at top, #1a1a1a, #000);
+            padding: 40px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        header h1 {
+            font-size: 3.2em;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #bfbfbf;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        section {
+            padding: 80px 10%;
+            border-bottom: 1px solid #1f1f1f;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 25px;
             color: #ffffff;
+            letter-spacing: 1px;
         }
-        .section {
-            margin-bottom: 30px;
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #121212, #0a0a0a);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(255,255,255,0.05);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        ul li::before {
+            content: "■";
+            position: absolute;
+            left: 0;
+            color: #ffffff;
+            font-size: 0.7em;
+            top: 6px;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #888;
+            background: #050505;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2em;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Daniel Galicia Reyes</h1>
-    <h2>Perfil Profesional</h2>
-
-    <div class="section">
+<header>
+    <div>
+        <h1>Daniel Galicia Reyes</h1>
         <p>
-        Ejecuto con precisión desde la primera vez. No tolero la mediocridad ni el retrabajo.
-        Establezco el estándar y los demás lo siguen. Mi desempeño es consistente, superior y orientado a resultados.
-        No me adapto al entorno: lo controlo.
+            Ejecución precisa. Dominio técnico. Liderazgo operativo.  
+            No compito: establezco el estándar. Donde otros cumplen, yo supero.
         </p>
     </div>
+</header>
 
-    <div class="section">
-        <h2>Valores y Cualidades</h2>
-        <ul>
-            <li>Disciplina operativa</li>
-            <li>Alta exigencia personal</li>
-            <li>Liderazgo natural</li>
-            <li>Responsabilidad absoluta</li>
-            <li>Ejecución precisa</li>
-            <li>Resistencia física y mental</li>
-            <li>Dominio técnico</li>
-            <li>Determinación</li>
-            <li>Aprendizaje acelerado</li>
-            <li>Orientación a resultados</li>
-        </ul>
+<section id="perfil">
+    <h2>Perfil Profesional</h2>
+    <p>
+        Perfil altamente disciplinado, responsable y orientado al alto rendimiento. Ejecuto con precisión desde la primera vez y no tolero el retrabajo ni la mediocridad. Mi desempeño es consistente, superior y medible. No me adapto al entorno: lo controlo.
+    </p>
+    <p>
+        Cuento con experiencia sólida en labores de exigencia física, respaldada por una condición física superior que me permite mantener productividad constante bajo presión. Poseo dominio técnico en múltiples áreas de la tecnología, con criterio claro para la resolución eficiente de problemas operativos y digitales.
+    </p>
+    <p>
+        Manejo el idioma inglés a nivel intermedio para comunicación funcional y comprensión operativa. Mi enfoque es directo: resultados, eficiencia y mejora continua.
+    </p>
+</section>
+
+<section id="valores">
+    <h2>Valores y Cualidades</h2>
+    <div class="grid">
+        <div class="card">Disciplina operativa absoluta</div>
+        <div class="card">Alta exigencia personal</div>
+        <div class="card">Liderazgo natural y dominante</div>
+        <div class="card">Responsabilidad total por resultados</div>
+        <div class="card">Ejecución precisa desde la primera vez</div>
+        <div class="card">Resistencia física y mental</div>
+        <div class="card">Dominio técnico sólido</div>
+        <div class="card">Determinación inquebrantable</div>
+        <div class="card">Aprendizaje acelerado</div>
+        <div class="card">Orientación estricta a objetivos</div>
     </div>
+</section>
+
+<section id="filosofia">
+    <h2>Filosofía de Trabajo</h2>
+    <p>
+        No repito tareas: ejecuto correctamente desde la primera vez. Mi estándar elimina errores, retrasos y excusas. No busco validación externa; mis resultados hablan por mí.
+    </p>
+    <p>
+        No compito con otros perfiles: los supero. No sigo procesos deficientes: los optimizo. No espero dirección: la marco.
+    </p>
+    <p>
+        Donde se requiere control, criterio y ejecución real, asumo el mando.
+    </p>
+</section>
+
+<section id="habilidades">
+    <h2>Áreas de Dominio</h2>
+    <ul>
+        <li>Trabajo físico de alta exigencia</li>
+        <li>Operación bajo presión</li>
+        <li>Tecnología y entornos digitales</li>
+        <li>Resolución de problemas técnicos</li>
+        <li>Optimización de procesos</li>
+        <li>Comunicación funcional en inglés</li>
+    </ul>
+</section>
+
+<footer>
+    © 2026 Daniel Galicia Reyes — Perfil de Alto Rendimiento
+</footer>
+
+<script>
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.15 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
 
 </body>
 </html>
+
